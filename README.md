@@ -8,7 +8,9 @@ Install Virtualbox and Vagrant first
 ## running
 Execute vagrant up in the directory with the Vagrantfile and provision.sh - it'll take a while first time.  Subsequent times will take about 30 seconds.
 vagrant halt to stop it.
-Box is set to be on prvate network IP 192.168.56.70
+Box is set to be on private network IP 192.168.56.70
+Keep the guest additions up to date in Virtualbox by using Vagrant plugin:
+	vagrant plugin install vagrant-vbguest
 
 
 ## whitepaper
@@ -47,6 +49,6 @@ DB2 network ports can be seen by viewing: cat /etc/services:
 
 ###Examples:
 * (Note VirtualBox port forwarding is on so either the private network or localhost will work)
-* jdbc:db2://localhost:50000/sample
-* jdbc:db2://192.168.56.70:50000/sample
+* jdbc:db2://localhost:50000/sample  password: db2inst1
+* jdbc:db2://192.168.56.70:50000/sample password: db2inst1
 
