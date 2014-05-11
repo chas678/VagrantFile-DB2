@@ -29,7 +29,13 @@ Canonical Ubuntu and DB2 Install info and whitepaper see: http://public.dhe.ibm.
 * DB2 Express-C Edition 9.7 Fix Pack 5 for Linux x86_64 has been installed in /opt/ibm/db2/V9.7.
 * The following DAS user has been configured:  dasusr1
 * The following instances (and user) have been configured: db2inst1
-* sample database is installed by running db2sample - see http://pic.dhe.ibm.com/infocenter/db2luw/v9r7/index.jsp?topic=%2Fcom.ibm.db2.luw.admin.cmd.doc%2Fdoc%2Fr0001934.html in the provisioning script, to remove
+* sample database is installed by running db2sample (in provisioning script) - see http://pic.dhe.ibm.com/infocenter/db2luw/v9r7/index.jsp?topic=%2Fcom.ibm.db2.luw.admin.cmd.doc%2Fdoc%2Fr0001934.html 
+* To remove SAMPLE database:
+```
+  vagrant ssh
+  sudo su - db2inst1
+  db2 drop database sample
+```
 * For more details, consult DB2 Information Center: http://publib.boulder.ibm.com/infocenter/db2luw/v9r7
 
 DB2 network ports can be seen by viewing: cat /etc/services:
