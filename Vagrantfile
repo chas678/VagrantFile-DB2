@@ -14,7 +14,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
    config.vm.provider :virtualbox do |vb|
      vb.name = "RDBMS-box"
-     vb.gui = true
      vb.customize ["modifyvm", :id, "--memory", "2048"]
    end
 
