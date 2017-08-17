@@ -4,6 +4,7 @@ This vagrant file installs an IBM DB2 express-c 9.7 onto an Ubuntu 10.04 Lucid b
 Install Virtualbox and Vagrant first
 * http://virtualbox.org
 * http://www.vagrantup.com
+x
 
 ## running
 Execute vagrant up in the directory with the Vagrantfile and provision.sh - it'll take a while first time.  Subsequent times will take about 30 seconds.
@@ -29,7 +30,7 @@ Canonical Ubuntu and DB2 Install info and whitepaper see: http://public.dhe.ibm.
 * DB2 Express-C Edition 9.7 Fix Pack 5 for Linux x86_64 has been installed in /opt/ibm/db2/V9.7.
 * The following DAS user has been configured:  dasusr1
 * The following instances (and user) have been configured: db2inst1
-* sample database is installed by running db2sample (in provisioning script) - see http://pic.dhe.ibm.com/infocenter/db2luw/v9r7/index.jsp?topic=%2Fcom.ibm.db2.luw.admin.cmd.doc%2Fdoc%2Fr0001934.html 
+* sample database is installed by running db2sample (in provisioning script) - see http://pic.dhe.ibm.com/infocenter/db2luw/v9r7/index.jsp?topic=%2Fcom.ibm.db2.luw.admin.cmd.doc%2Fdoc%2Fr0001934.html
 * To remove SAMPLE database:
 ```
   vagrant ssh
